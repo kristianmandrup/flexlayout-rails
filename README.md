@@ -73,6 +73,15 @@ Alexis Deveria version, see repo [css-template-layout](https://code.google.com/p
 
 Pablo Escalada version, see repo at [cssTemplateLayout](https://github.com/diesire/cssTemplateLayout) and test folder for examples.
 
+## Flexbox Articles
+
+* [Flexbox quick guide](http://www.html5rocks.com/en/tutorials/flexbox/quick/)
+
+_Critiques:_
+
+* [Why Flexboxes Aren't Good for Page Layout](http://www.xanthir.com/blog/b4580)
+* [Flexbox vs Princess Bride](http://oli.jp/2011/css3-flexbox/)
+
 ## Contributing to flexie-rails
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
