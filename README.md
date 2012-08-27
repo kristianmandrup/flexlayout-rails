@@ -5,11 +5,11 @@ Polyfills for various HTML 5 "flex-layout" models.
 * flexie.js (Flex box layout)
 * CSS Template Layout
 
-Flexie.js is a polyfill for the CSS Flex layout from W3C.
+Flexie.js is a polyfill for the [CSS3 Flexbox](http://www.w3.org/TR/css3-flexbox/) module from W3C.
 
-CSS Template Layout is an implementation of CSS Template Layout Module from W3C
+CSS Template Layout is an implementation of [CSS Template Layout Module](http://www.w3.org/TR/css3-layout/) from W3C. Currently 2 different implementions are packaged in this gem.
 
-These polyfills are packaged for use with the Rails asset pipeline. 
+These polyfills are all packaged for use with the Rails asset pipeline. 
 This lets you use and experiment with the new HTML5 CSS layout model in order to simplify and improve your HTML grids and layout :)
 
 ## Install
