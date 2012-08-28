@@ -76,11 +76,15 @@ selector
 *Flexbox Articles*
 
 * [Flexbox quick guide](http://www.html5rocks.com/en/tutorials/flexbox/quick/)
+* [Flexible box layout explained](http://coding.smashingmagazine.com/2011/09/19/css3-flexible-box-layout-explained/)
+* [Understanding flexbox](http://benfrain.com/understanding-the-css3-flexbox-flexible-box-layout-module/)
 
 _Critiques:_
 
 * [Why Flexboxes Aren't Good for Page Layout](http://www.xanthir.com/blog/b4580)
 * [Flexbox vs Princess Bride](http://oli.jp/2011/css3-flexbox/)
+
+Conclusion: As is almost always the case, they are good only if used in the right context to solve the right problem ;)
 
 ### Regions.js
 
