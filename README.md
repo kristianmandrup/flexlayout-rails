@@ -62,6 +62,17 @@ DEFAULTS = {
 }
 ```
 
+Note:
+Flexbox comes in different syntaxes as described [here](http://css-tricks.com/old-flexbox-and-new-flexbox/). The latest `flex-` syntax is only supported by Chrome 21+ as shown [here](http://caniuse.com/flexbox). Hence you need fallback in your CSS:
+
+```css
+selector 
+{ display: flex }
+
+.no-flexbox selector 
+{ display: box }
+```
+
 *Flexbox Articles*
 
 * [Flexbox quick guide](http://www.html5rocks.com/en/tutorials/flexbox/quick/)
