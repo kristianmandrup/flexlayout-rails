@@ -80,7 +80,30 @@ The following stylesheets with CSS helper classes are included.
 * `flexlayout.css`
 * `flex-box-helpers.css`
 
-TODO: Also provide as SCSS/SASS mixins ;)
+Better yet to use [Compass box mixins](http://compass-style.org/examples/compass/css3/box/) 
+
+```scss
+@import "compass/css3"
+
+.example {
+  @include display-box;
+  @include box-orient(horizontal);
+  @include box-align(stretch);
+
+  ...
+  .content {
+    @include box-flex(1);
+  }  
+} 
+```
+
+Or fx [Preboot](https://github.com/markdotto/Preboot.less) if using LESS.
+
+```less
+.content {
+  .box-flex(1);
+}
+```
 
 *Flexbox Articles*
 
