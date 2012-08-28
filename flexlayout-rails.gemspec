@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = "flexlayout-rails"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = "2012-08-27"
-  s.description = "TODO: longer description of your gem"
+  s.date = "2012-08-28"
+  s.description = "Use Flex and template CSS layout models in your Rails apps"
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -20,17 +20,37 @@ Gem::Specification.new do |s|
     ".document",
     ".rspec",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
+    "README.md",
     "Rakefile",
     "VERSION",
-    "spec/flexie-rails_spec.rb",
-    "spec/spec_helper.rb"
+    "flexlayout-rails.gemspec",
+    "lib/flexlayout-rails.rb",
+    "spec/regions/img/lorem-ipsum-logo.jpeg",
+    "spec/regions/index.html",
+    "spec/regions/js/detection.js",
+    "spec/regions/js/layout.js",
+    "spec/regions/js/setup.js",
+    "spec/spec_helper.rb",
+    "vendor/assets/javascripts/feature-detects/cssregions.js",
+    "vendor/assets/javascripts/flexie.js",
+    "vendor/assets/javascripts/flexie.min.js",
+    "vendor/assets/javascripts/jquery.lettering.js",
+    "vendor/assets/javascripts/jquery.lettering.min.js",
+    "vendor/assets/javascripts/regions.jquery.js",
+    "vendor/assets/javascripts/regions.jquery.min.js",
+    "vendor/assets/javascripts/template_layout/jquery/jquery.tpl_layout1.1.6.js",
+    "vendor/assets/javascripts/template_layout/jquery/jquery.tpl_layout1.1.6.min.js",
+    "vendor/assets/javascripts/template_layout/templateLayout.compiler.js",
+    "vendor/assets/javascripts/template_layout/templateLayout.generator.js",
+    "vendor/assets/javascripts/template_layout/templateLayout.js"
   ]
   s.homepage = "http://github.com/kristianmandrup/flexlayout-rails"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
-  s.summary = "TODO: one-line summary of your gem"
+  s.summary = "CSS Flexible layout polyfills pre-packaged for Rails asset pipeline"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
