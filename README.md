@@ -1,13 +1,16 @@
-# Flex layout for Rails
+# Flexible CSS layout models for Rails using Polyfills
 
-Polyfills for various HTML 5 "flex-layout" models.
+Polyfills for various HTML 5 "more flexible" layout models.
 
-* flexie.js (Flex box layout)
+* Flexie.js (Flex box layout)
+* Regions.js (CSS Regions)
 * CSS Template Layout
 
 Flexie.js is a polyfill for the [CSS3 Flexbox](http://www.w3.org/TR/css3-flexbox/) module from W3C.
 
 CSS Template Layout is an implementation of [CSS Template Layout Module](http://www.w3.org/TR/css3-layout/) from W3C. Currently 2 different implementions are packaged in this gem.
+
+[Regions.js](https://github.com/ricardrobin/Regions.js) is the first implementation for the CSS3-Regions in the real world.
 
 These polyfills are all packaged for use with the Rails asset pipeline. 
 This lets you use and experiment with the new HTML5 CSS layout model in order to simplify and improve your HTML grids and layout :)
@@ -20,6 +23,18 @@ This lets you use and experiment with the new HTML5 CSS layout model in order to
 
 ```text
 //= require flexie
+```
+
+### Regions.js
+
+If you find [this](http://labs.adobe.com/technologies/cssregions/) interesting, just try this script!
+
+Regions.js requires [jQuery](http://jquery.com/) and [Lettering.js](https://github.com/davatron5000/Lettering.js) in order to work.
+
+```text
+//= require jquery
+//= require lettering.jquery
+//= require regions.jquery.min
 ```
 
 ### Template layout 2011-2012 Pablo Escalada
@@ -65,6 +80,32 @@ DEFAULTS = {
   direction : "inherit",
   pack      : "start"
 }
+```
+
+## Regions.js usage
+
+```javascript
+$(function(){ // When DOM is Loaded
+    $("#article-flow").regions(".article-region");
+});
+```
+
+You can also pass a jQuery Object or a list of jQuery Objects / jQuery Selectorstring to the function :
+
+```javascript
+$("#content-source-element").regions($(".content-target-elements"));
+
+// or
+
+$("#content-source-element").regions(["#article-region-1", "#article-region-2", "#article-region-3"]);
+
+// or
+
+$("#content-source-element").regions([$("#article-region-1"), $("#article-region-2"), $("#article-region-3")]);
+
+// even mixed
+
+$("#content-source-element").regions([$("#article-region-1"), "#article-region-2", $("#article-region-3")]);
 ```
 
 ## Template layout usage
