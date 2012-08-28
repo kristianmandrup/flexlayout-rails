@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
   s.date = "2012-08-28"
-  s.description = "Use Flex and template CSS layout models in your Rails apps"
+  s.description = "Use CSS Flex, Regions and Template layout models in your Rails apps"
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -50,7 +50,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
-  s.summary = "CSS Flexible layout polyfills pre-packaged for Rails asset pipeline"
+  s.summary = "CSS3 layout polyfills pre-packaged for Rails asset pipeline"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
