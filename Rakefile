@@ -18,7 +18,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/kristianmandrup/flexlayout-rails"
   gem.license = "MIT"
   gem.summary = %Q{CSS3 layout polyfills pre-packaged for Rails asset pipeline}
-  gem.description = %Q{Use CSS Flex, Regions and Template layout models in your Rails apps}
+  gem.description = %Q{Use CSS Flex, Regions, Multi-column and Template layout models in your Rails apps}
   gem.email = "kmandrup@gmail.com"
   gem.authors = ["Kristian Mandrup"]
   # dependencies defined in Gemfile

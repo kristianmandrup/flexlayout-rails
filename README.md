@@ -4,7 +4,8 @@ Polyfills for various HTML 5 "more flexible" layout models.
 
 * Flexie.js (Flex box layout)
 * Regions.js (CSS Regions)
-* CSS Template Layout
+* CSS Multi-column
+* CSS Template layout
 
 Flexie.js is a polyfill for the [CSS3 Flexbox](http://www.w3.org/TR/css3-flexbox/) module from W3C.
 
@@ -14,6 +15,13 @@ CSS Template Layout is an implementation of [CSS Template Layout Module](http://
 
 These polyfills are all packaged for use with the Rails asset pipeline. 
 This lets you use and experiment with the new HTML5 CSS layout model in order to simplify and improve your HTML grids and layout :)
+
+In addition a stylesheet called `flexlayout.css` is included, which wraps the Flex layout model in order to provide some nice utility CSS classes. See the examples in `spec/flexlayout` for a usage demo.
+
+## Extras
+
+* [Wookmark-jQuery](https://github.com/GBKS/Wookmark-jQuery)
+* [FT-column-flow](https://github.com/ftlabs/ftcolumnflow)
 
 ## Install
 
@@ -25,35 +33,7 @@ This lets you use and experiment with the new HTML5 CSS layout model in order to
 //= require flexie
 ```
 
-### Regions.js
-
-If you find [this](http://labs.adobe.com/technologies/cssregions/) interesting, just try this script!
-
-Regions.js requires [jQuery](http://jquery.com/) and [Lettering.js](https://github.com/davatron5000/Lettering.js) in order to work.
-
-```text
-//= require jquery
-//= require lettering.jquery
-//= require regions.jquery.min
-```
-
-### Template layout 2011-2012 Pablo Escalada
-
-```text
-//= require template_layout/templateLayout
-```
-
-Not sure how/if to use the template generator and compiler!?
-
-### Template layout 2010, Alexis Deveria 
-
-```text
-//= require template_layout/jquery/jquery.tpl_layout1.1.16.min
-```
-
-Enjoy :)
-
-## Flexie usage
+*Flexie usage*
 
 ```javscript
 var box = new Flexie.box({
@@ -82,7 +62,36 @@ DEFAULTS = {
 }
 ```
 
-## Regions.js usage
+*Flexbox Articles*
+
+* [Flexbox quick guide](http://www.html5rocks.com/en/tutorials/flexbox/quick/)
+
+_Critiques:_
+
+* [Why Flexboxes Aren't Good for Page Layout](http://www.xanthir.com/blog/b4580)
+* [Flexbox vs Princess Bride](http://oli.jp/2011/css3-flexbox/)
+
+### Regions.js
+
+If you find [this](http://labs.adobe.com/technologies/cssregions/) interesting, just try this script!
+
+Regions.js requires [jQuery](http://jquery.com/) and [Lettering.js](https://github.com/davatron5000/Lettering.js) in order to work.
+
+```text
+//= require jquery
+//= require lettering.jquery
+//= require regions.jquery.min
+```
+
+The `feature-detects/cssregions` Modernizr detection included is part of Modernizr _2.6+_ and supplied by _Adobe_.
+
+```javascript
+if (!Modernizr.cssregions) {
+  // use regions polyfill
+}
+```
+
+*Regions.js API usage*
 
 ```javascript
 $(function(){ // When DOM is Loaded
@@ -108,22 +117,70 @@ $("#content-source-element").regions([$("#article-region-1"), $("#article-region
 $("#content-source-element").regions([$("#article-region-1"), "#article-region-2", $("#article-region-3")]);
 ```
 
+### Template layout 2011-2012 Pablo Escalada
+
+```text
+//= require template_layout/templateLayout
+```
+
+Not sure how/if to use the template generator and compiler!?
+
+### Template layout 2010, Alexis Deveria 
+
+```text
+//= require template_layout/jquery/jquery.tpl_layout1.1.16.min
+```
+
 ## Template layout usage
 
 Alexis Deveria version, see repo [css-template-layout](https://code.google.com/p/css-template-layout/) and these [demos](http://a.deveria.com/csstpl/) :)
 
 Pablo Escalada version, see repo at [cssTemplateLayout](https://github.com/diesire/cssTemplateLayout) and test folder for examples.
 
-## Flexbox Articles
+## Multi column
 
-* [Flexbox quick guide](http://www.html5rocks.com/en/tutorials/flexbox/quick/)
+See [Multi-column](https://github.com/stadtwerk/MultiColumn)
 
-_Critiques:_
+Example:
 
-* [Why Flexboxes Aren't Good for Page Layout](http://www.xanthir.com/blog/b4580)
-* [Flexbox vs Princess Bride](http://oli.jp/2011/css3-flexbox/)
+```html
+<div class="multi-column">
+  <div class="column">hello</div>
+  ...
+</div>
+```
 
-## Contributing to flexie-rails
+Note: Use the `multi-column.css` included as well ;)
+
+## Wookmark
+
+```text
+//= require jquery.wookmark.min
+```
+
+See [Wookmark-jQuery](https://github.com/GBKS/Wookmark-jQuery) for examples and demos.
+
+## FT Column flow
+
+```text
+//= require FT-colum-flow.min
+```
+
+* Configurable column widths, gutters and margins
+* Fixed-position elements
+* Elements spanning columns
+* Keep-with-next to avoid headings at the bottom of a column
+* No-wrap class to avoid splitting elements across columns
+* Grouping of columns into pages
+* Horizontal or vertical alignment of pages
+* Standardised line height to align text baseline to a grid
+* Rapid reflow as required by events such as device orientation or font-size change
+
+See [FT-column-flow](https://github.com/ftlabs/ftcolumnflow) for examples, demos and usage guide etc.
+
+See fx [BAsic usage example](http://ftlabs.github.com/ftcolumnflow/1.html)
+
+## Contributing to flexlayout-rails
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.

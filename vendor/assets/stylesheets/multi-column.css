@@ -1,0 +1,13 @@
+.multi-column {
+  overflow:auto;
+}
+.multi-column .column {
+  position:relative;
+  float:left;
+  border-left:1px dashed #999;
+  margin-left:-1px;
+}
+.multi-column .column:first-child{
+  border-left:0;
+  margin-left:0;
+}
