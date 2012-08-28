@@ -73,6 +73,15 @@ selector
 { display: box }
 ```
 
+### Flex box helpers
+
+The following stylesheets with CSS helper classes are included.
+
+* `flexlayout.css`
+* `flex-box-helpers.css`
+
+TODO: Also provide as SCSS/SASS mixins ;)
+
 *Flexbox Articles*
 
 * [Flexbox quick guide](http://www.html5rocks.com/en/tutorials/flexbox/quick/)
