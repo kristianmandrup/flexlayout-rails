@@ -73,6 +73,16 @@ selector
 { display: box }
 ```
 
+### View helpers
+
+```haml
+= flexie_script
+```
+
+Renders:
+
+    <!--[if lte IE 8]><script src="js/flexie.js"></script><![endif]-->
+
 ### Flex box helpers
 
 The following stylesheets with CSS helper classes are included.
