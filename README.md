@@ -23,6 +23,29 @@ In addition a stylesheet called `flexlayout.css` is included, which wraps the Fl
 * [Wookmark-jQuery](https://github.com/GBKS/Wookmark-jQuery)
 * [FT-column-flow](https://github.com/ftlabs/ftcolumnflow)
 
+### Bonus view helpers
+
+`html5_script folder = nil`
+
+```html
+<!--[if lte IE 8]><script src=\"html5-forms/html5.min.js\" type=\"text/javascript\"><![endif]-->
+```
+
+No args:
+
+```html
+"<!--[if lte IE 8]><script src=\"http://html5shim.googlecode.com/svn/trunk/html5.js\" type=\"text/javascript\"><![endif]-->"
+```
+
+
+`script_src_tag src`
+
+Renders fx:
+
+```html
+<script src=\"html5-forms/html5.min.js\" type=\"text/javascript\">
+```
+
 ## Install
 
 `gem 'flexlayout-rails'`
@@ -235,7 +258,7 @@ See [Wookmark-jQuery](https://github.com/GBKS/Wookmark-jQuery) for examples and 
 
 See [FT-column-flow](https://github.com/ftlabs/ftcolumnflow) for examples, demos and usage guide etc.
 
-See fx [BAsic usage example](http://ftlabs.github.com/ftcolumnflow/1.html)
+See fx [Basic usage example](http://ftlabs.github.com/ftcolumnflow/1.html)
 
 ## Contributing to flexlayout-rails
  
