@@ -113,6 +113,8 @@ The following stylesheets with CSS helper classes are included.
 * `flexlayout.css`
 * `flex-box-helpers.css`
 
+Also SCSS mixins at `flex-layout.scss`
+
 Better yet to use [Compass box mixins](http://compass-style.org/examples/compass/css3/box/) 
 
 ```scss
