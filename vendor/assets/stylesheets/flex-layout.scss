@@ -1,11 +1,16 @@
 /* From: http://infrequently.org/2009/08/css-3-progress/
 
-hbox and vbox classes */
+/* hbox */
  
 @mixin hbox() {
   @include display-box;
   @include box-orient(horizontal);
   @include box-align(stretch); 
+}
+
+@mixin hbox-item() {
+  @include box-flex(0);
+  display: block;
 }
 
 .hbox {
@@ -15,18 +20,20 @@ hbox and vbox classes */
     @include hbox-item();
   }
 }
- 
-@mixin hbox-item() {
-  @include box-flex(0);
-  display: block;
-}
 
+/* vbox */ 
  
 @mixin vbox() {
   @include display-box;
   @include box-orient(vertical);
   @include box-align(stretch);  
 }
+
+@mixin vbox-item() {
+  @include box-flex(0);
+  display: block;
+}
+
 
 .vbox {
   @include vbox();
@@ -35,12 +42,9 @@ hbox and vbox classes */
     @include vbox-item();
   }
 }
- 
-@mixin vbox-item {
-  @include box-flex(0);
-  display: block;
-}
-  
+
+/* reverse direction */
+   
 @mixin flex-reverse() {
   @include box-direction(reverse);
 }
@@ -49,7 +53,9 @@ hbox and vbox classes */
   @include flex-reverse()
 }
 
-@mixin flex-box($size: 1) {
+/* flex-box and spacer */
+
+@mixin flex-box($size: 0) {
   @include box-flex($size);
 }
  
@@ -57,7 +63,7 @@ hbox and vbox classes */
   @include flex-box($size);
 }
 
-@for $i in 1 through 12 {
+@for $i in 0 through 12 {
   .flex-spacer#{$i} {
     @include flex-spacer(#{$i});
   }
@@ -66,6 +72,8 @@ hbox and vbox classes */
     @include flex-box(#{$i});
   }
 }
+
+/* flex-group */
    
 @mixin flex-group($size) {
   @include box-flex-group($size);
@@ -76,6 +84,8 @@ hbox and vbox classes */
     @include flex-group(#{$i});
   }
 }
+
+/* flex pack */
 
 @mixin flex-pack($pack) {
   @include box-pack($pack);
