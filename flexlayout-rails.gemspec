@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "flexlayout-rails"
-  s.version = "0.1.3"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = "2012-08-31"
+  s.date = "2012-09-03"
   s.description = "Use CSS Flex, Regions, Multi-column and Template layout models in your Rails apps"
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
@@ -56,6 +56,7 @@ Gem::Specification.new do |s|
     "vendor/assets/javascripts/template_layout/templateLayout.generator.js",
     "vendor/assets/javascripts/template_layout/templateLayout.js",
     "vendor/assets/stylesheets/flex-box-helpers.css",
+    "vendor/assets/stylesheets/flex-layout.scss",
     "vendor/assets/stylesheets/flexlayout.css",
     "vendor/assets/stylesheets/multi-column.css"
   ]
