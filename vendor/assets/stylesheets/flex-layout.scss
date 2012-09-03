@@ -7,16 +7,33 @@ hbox and vbox classes */
   @include box-orient(horizontal);
   @include box-align(stretch); 
 }
+
+.hbox {
+  @include hbox();
+
+  > * {
+    @include hbox-item();
+  }
+}
  
 @mixin hbox-item() {
   @include box-flex(0);
   display: block;
 }
+
  
 @mixin vbox() {
   @include display-box;
   @include box-orient(vertical);
   @include box-align(stretch);  
+}
+
+.vbox {
+  @include vbox();
+
+  > * {
+    @include vbox-item();
+  }
 }
  
 @mixin vbox-item {
@@ -27,17 +44,41 @@ hbox and vbox classes */
 @mixin flex-reverse() {
   @include box-direction(reverse);
 }
+
+.flex-reverse {
+  @include flex-reverse()
+}
+
+@mixin flex-box($size: 1) {
+  @include box-flex($size);
+}
  
 @mixin flex-spacer($size: 1)
   @include flex-box($size);
 }
- 
-@mixin flex-box($size: 1) {
-  @include box-flex($size);
+
+@for $i in 1 through 12 {
+  .flex-spacer#{$i} {
+    @include flex-spacer(#{$i});
+  }
+
+  .flex-box#{$i} {
+    @include flex-box(#{$i});
+  }
 }
-  
+   
 @mixin flex-group($size) {
   @include box-flex-group($size);
+}
+
+@for $i in 1 through 3 {
+  .flex-group#{$i} {
+    @include flex-group(#{$i});
+  }
+}
+
+@mixin flex-pack($pack) {
+  @include box-pack($pack);
 }
   
 @mixin flex-start() {
