@@ -3,51 +3,29 @@
 hbox and vbox classes */
  
 @mixin hbox() {
-  display: -webkit-box;
-  -webkit-box-orient: horizontal;
-  -webkit-box-align: stretch;
- 
-  display: -moz-box;
-  -moz-box-orient: horizontal;
-  -moz-box-align: stretch;
- 
-  display: box;
-  box-orient: horizontal;
-  box-align: stretch;
+  @include display-box;
+  @include box-orient(horizontal);
+  @include box-align(stretch); 
 }
  
 @mixin hbox-item() {
-  -webkit-box-flex: 0;
-  -moz-box-flex: 0;
-  box-flex: 0;
+  @include box-flex(0);
   display: block;
 }
  
 @mixin vbox() {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-box-align: stretch;
- 
-  display: -moz-box;
-  -moz-box-orient: vertical;
-  -moz-box-align: stretch;
- 
-  display: box;
-  box-orient: vertical;
-  box-align: stretch;
+  @include display-box;
+  @include box-orient(vertical);
+  @include box-align(stretch);  
 }
  
 @mixin vbox-item {
-  -webkit-box-flex: 0;
-  -moz-box-flex: 0;
-  box-flex: 0;
+  @include box-flex(0);
   display: block;
 }
   
 @mixin flex-reverse() {
-  -webkit-box-direction: reverse;
-  -moz-box-direction: reverse;
-  box-direction: reverse;
+  @include box-direction(reverse);
 }
  
 @mixin flex-spacer($size: 1)
@@ -55,31 +33,21 @@ hbox and vbox classes */
 }
  
 @mixin flex-box($size: 1) {
-  -webkit-box-flex: $size;
-  -moz-box-flex: $size;
-  box-flex: $size;
+  @include box-flex($size);
 }
   
 @mixin flex-group($size) {
-  -webkit-box-flex-group: $size;
-  -moz-box-flex-group: $size;
-  box-flex-group: $size;
+  @include box-flex-group($size);
 }
   
 @mixin flex-start() {
-  -webkit-box-pack: start;
-  -moz-box-pack: start;
-  box-pack: start;
+  @include box-pack(start);
 }
  
 @mixin flex-end() {
-  -webkit-box-pack: end;
-  -moz-box-pack: end;
-  box-pack: end;
+  @include box-pack(end);
 }
  
 @mixin flex-center() {
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
+  @include box-pack(center);
 }
